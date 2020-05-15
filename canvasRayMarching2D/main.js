@@ -529,3 +529,5 @@ class Camera {
         // this.x--;
     }
 }
+
+main();
