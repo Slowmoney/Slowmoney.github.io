@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <script src="main.js"></script>
+</head>
+<style>
+    input {
+        width: 50px;
+    }
+
+    .in {
+        display: inline;
+    }
+
+    canvas {
+        display: block;
+    }
+</style>
+
+<body onload="main();">
+    <canvas id="canvas" width="1024" height="1024"></canvas>
+    <div class="in">
+        <div id="position"> 
+            <input id="px" type="number" onchange="cam.position =  new vec3(this.valueAsNumber,cam.position.y,cam.position.z);">
+            <input id="py" type="number" onchange="cam.position =  new vec3(cam.position.x,this.valueAsNumber,cam.position.z);">
+            <input id="pz" type="number" onchange="cam.position =  new vec3(cam.position.x,cam.position.y,this.valueAsNumber);">
+        </div>
+        <div id="direction">
+            <input id="dx" type="number" onchange="cam.direction =  new vec3(this.valueAsNumber,cam.direction.y,cam.direction.z);">
+            <input  id="dy" type="number" onchange="cam.direction =  new vec3(cam.direction.x,this.valueAsNumber,cam.direction.z);">
+            <input id="dz" type="number" onchange="cam.direction = new vec3(cam.direction.x,cam.direction.y,this.valueAsNumber);">
+        </div>
+    </div>
+</body>
+
+</html>
